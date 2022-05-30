@@ -1,0 +1,12 @@
+@import "~normalize.css";
+
+.container{
+    margin: 0 auto;
+    color: rgb(162, 252, 59);
+    font-size: 30px;
+    max-width: 1000px;
+}
+
+h1{
+    text-align: center;
+}
