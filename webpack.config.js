@@ -30,7 +30,7 @@ const optimization = () => {
 module.exports = {
     context: path.resolve(__dirname,'src'),
     entry: {
-        main: './index.js'
+        main: ['@babel/polyfill', './index.js']
     },
     output: {
         filename: '[name].[hash].bundle.js',
