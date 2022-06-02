@@ -88,14 +88,20 @@ module.exports = {
                     "sass-loader",
                 ],
               },
-            {
-                test: /\.(png|jpg|svg|gif)$/,
-                use: ['file-loader']
-            },
-            {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
-            }
+              {
+                test: /\.(woff|woff2|ttf|otf|eot)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'fonts/[name][ext]'
+                } 
+              },
+              {
+                test: /\.(jpe?g|png|gif|svg|ico)$/,
+                type: 'asset/resource',
+                generator: {
+                  filename: 'img/[name][ext]'
+                } 
+              }
         ]
     }
 }
